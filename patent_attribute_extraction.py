@@ -10,7 +10,7 @@ import pandas as pd
 
 from cypris_xml_parser import XmlParser
 
-PRIORITY_ORDER = {
+DEFAULT_PRIORITY_ORDER = {
     1: {
         'attribute': "format",
         "values": ["epo"]
@@ -33,7 +33,7 @@ class PatentAttributeExtractor:
             -> list[str] | pd.DataFrame:
         # convert to df for easier processing
         if priority_ordering is None:
-            priority_ordering = PRIORITY_ORDER
+            priority_ordering = DEFAULT_PRIORITY_ORDER
         if attributes is None:
             attributes = ['doc-number']
 

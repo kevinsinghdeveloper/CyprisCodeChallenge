@@ -3,7 +3,7 @@ Tests for PatentAttributeExtractor class.
 """
 import unittest
 import pandas as pd
-from patent_attribute_extraction import PatentAttributeExtractor, PRIORITY_ORDER
+from patent_attribute_extraction import PatentAttributeExtractor, DEFAULT_PRIORITY_ORDER
 
 
 class TestPatentAttributeExtractor(unittest.TestCase):
@@ -68,7 +68,7 @@ class TestPatentAttributeExtractor(unittest.TestCase):
     def test_extract_single_attribute_priority_order(self):
         """Test that single attribute extraction respects priority order."""
         extractor = PatentAttributeExtractor(self.sample_xml)
-        result = extractor.extract_attributes(priority_ordering=PRIORITY_ORDER)
+        result = extractor.extract_attributes(priority_ordering=DEFAULT_PRIORITY_ORDER)
 
         # EPO format should come first (999000888)
         # Then patent-office (66667777)

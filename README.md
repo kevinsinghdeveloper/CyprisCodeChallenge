@@ -90,7 +90,7 @@ python patent_attribute_extraction.py --help
 If you want to use custom priority ordering!
 
 ```python
-from patent_attribute_extraction import PatentAttributeExtractor, PRIORITY_ORDER
+from patent_attribute_extraction import PatentAttributeExtractor, DEFAULT_PRIORITY_ORDER
 
 # Read XML file
 with open('input_xmls/test_case_1.txt', 'r') as f:
@@ -100,14 +100,14 @@ with open('input_xmls/test_case_1.txt', 'r') as f:
 extractor = PatentAttributeExtractor(xml_data)
 
 # Extract doc-numbers with default priority (EPO first, then patent-office)
-doc_numbers = extractor.extract_attributes(priority_ordering=PRIORITY_ORDER)
+doc_numbers = extractor.extract_attributes(priority_ordering=DEFAULT_PRIORITY_ORDER)
 print(doc_numbers)
 # Output: ['999000888', '66667777']
 
 # Extract multiple attributes (returns DataFrame)
 result = extractor.extract_attributes(
     attributes=['doc-number', 'country', 'lang'],
-    priority_ordering=PRIORITY_ORDER
+    priority_ordering=DEFAULT_PRIORITY_ORDER
 )
 print(result)
 
