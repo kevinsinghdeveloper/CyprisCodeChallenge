@@ -53,6 +53,15 @@ uv pip install -r requirements.txt
 
 ## Usage
 
+**Coding challenge solution**: 
+Run this one for the Cypris coding challenge assessment solution!
+```bash
+python run_assesment_scenario.py
+```
+
+Other ways to use the tool are below.
+
+
 ### Command Line Interface
 
 **Basic usage** (extract doc-numbers with default settings):
@@ -74,6 +83,7 @@ python patent_attribute_extraction.py input_xmls/test_case_1.txt --xpath './/doc
 ```bash
 python patent_attribute_extraction.py --help
 ```
+
 
 ### Python Code Example
 
