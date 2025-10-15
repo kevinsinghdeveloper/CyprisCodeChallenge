@@ -1,3 +1,10 @@
+'''
+Author: Kevin Singh
+
+Class to extract attributes from patent XML data, prioritizing certain values.
+Handles malformed XML and allows custom XPath and attribute selection.
+
+'''
 import numpy as np
 import pandas as pd
 
