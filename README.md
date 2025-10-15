@@ -40,21 +40,6 @@ This project solves the challenge of extracting `doc-number` values from patent 
 
 ## Installation
 
-### Option 1: Automated Setup (Recommended)
-
-```bash
-# Run the setup script
-./setup.sh
-```
-
-This will:
-1. Check if `uv` is installed
-2. Create a virtual environment
-3. Install all dependencies
-4. Run tests to verify installation
-
-### Option 2: Manual Setup
-
 ```bash
 # Create virtual environment
 uv venv
