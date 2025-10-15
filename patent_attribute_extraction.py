@@ -53,12 +53,13 @@ class PatentAttributeExtractor:
                     )
 
         if len(attributes) == 1:
-            return df.sort_values(by=['priority'] + attributes)\
-                .drop(columns=['priority'])\
-                ['doc-number']\
-                .drop_duplicates()\
-                .astype(str)\
+            return df.sort_values(by=['priority'] + attributes) \
+                .drop(columns=['priority']) \
+                [attributes[0]] \
+                .drop_duplicates() \
+                .astype(str) \
                 .tolist()
+
         else:
             return df.sort_values(by=['priority'] + attributes)[attributes]
 
