@@ -1,6 +1,6 @@
 # Cypris Patent XML Parser
 
-Kevin Singh
+**Kevin Singh**
 
 A Python cli tool used to clean malformed XML + extracts attributes from the cleaned patent XML. 
 
