@@ -58,7 +58,10 @@ uv pip install -r requirements.txt
 **Coding challenge solution**: 
 Run this one for the Cypris coding challenge assessment solution!
 ```bash
-python run_assesment_scenario.py
+# Mac ONLY
+python run_assesment_scenario.py 
+# Windows ONLY
+uv run run_assesment_scenario.py
 ```
 
 Other ways to use the tool are below.
@@ -68,22 +71,34 @@ Other ways to use the tool are below.
 
 **Basic usage** (extract doc-numbers with default settings):
 ```bash
+# Mac ONLY
 python patent_attribute_extraction.py input_xmls/test_case_1.txt
+# Windows ONLY
+uv run patent_attribute_extraction.py input_xmls/test_case_1.txt
 ```
 
 **Extract multiple attributes**:
 ```bash
+# Max ONLY
 python patent_attribute_extraction.py input_xmls/test_case_1.txt --attributes doc-number country lang
+# Windows ONLY
+uv run patent_attribute_extraction.py input_xmls/test_case_1.txt --attributes doc-number country lang
 ```
 
 **Custom XPath**:
 ```bash
+# Mac ONLY
 python patent_attribute_extraction.py input_xmls/test_case_1.txt --xpath './/document-id[@format="epo"]'
+# Windows ONLY
+uv run patent_attribute_extraction.py input_xmls/test_case_1.txt --xpath './/document-id[@format="epo"]'
 ```
 
 **Help**:
 ```bash
+# Mac ONLY
 python patent_attribute_extraction.py --help
+# Windows ONLY
+uv run patent_attribute_extraction.py --help
 ```
 
 
@@ -145,15 +160,21 @@ The following assumptions are made about the XML structure:
 
 ## Testing
 
+
 ```bash
 # Run all tests
+# Mac ONLY
 python -m unittest discover tests -v
+# Windows ONLY
+uv run python -m unittest discover tests -v
+
 
 # Run specific test file
+# Mac ONLY
 python -m unittest tests.test_patent_attribute_extraction -v
+# Windows ONLY
+uv run python -m unittest tests.test_patent_attribute_extraction -v
 
-# Run with pytest (if installed)
-pytest tests/ -v
 ```
 
 ## Example Output
@@ -161,7 +182,11 @@ pytest tests/ -v
 Given the sample XML in `input_xmls/test_case_1.txt`:
 
 ```bash
-$ python patent_attribute_extraction.py input_xmls/test_case_1.txt
+# Mac ONLY
+python patent_attribute_extraction.py input_xmls/test_case_1.txt
+# Windows ONLY
+uv run patent_attribute_extraction.py input_xmls/test_case_1.txt
+
 ```
 
 Output:
