@@ -44,8 +44,10 @@ This project solves the challenge of extracting `doc-number` values from patent 
 # Create virtual environment
 uv venv
 
-# Activate virtual environment
+# Activate virtual environment (Mac)
 source .venv/bin/activate
+# Activate virtual environment (Windows)
+.venv\Scripts\activate.bat
 
 # Install dependencies
 uv pip install -r requirements.txt
